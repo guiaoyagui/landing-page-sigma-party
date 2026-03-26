@@ -1,6 +1,7 @@
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import { LanguageProvider } from "./contexts/LanguageContext"; // <-- ADICIONE ESTA LINHA
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 
@@ -18,7 +19,9 @@ function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="dark">
-        <Router />
+        <LanguageProvider>  {/* <-- ENVOLVA O ROUTER COM ISTO */}
+          <Router />
+        </LanguageProvider> {/* <-- ENVOLVA O ROUTER COM ISTO */}
       </ThemeProvider>
     </ErrorBoundary>
   );
