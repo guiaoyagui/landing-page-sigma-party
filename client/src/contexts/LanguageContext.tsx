@@ -2,43 +2,99 @@ import React, { createContext, useContext, useState } from "react";
 
 type Language = "pt" | "en" | "es";
 
-// O nosso dicionário com todas as traduções
 const translations = {
   pt: {
-    heroSubtitle: "Evento exclusivo para convidados selecionados",
-    heroDesc: "Networking, experiências premium e conexões de alto nível.",
-    btnForm: "Preencher Formulário",
-    aboutTitle1: "Sobre o ",
-    aboutTitle2: "Evento",
-    about1: "O PRE BIS SIGMA PARTY 2026 é um evento de networking exclusivo, cuidadosamente curado para os principais players que movimentam o mercado.",
-    about2: "Um encontro dedicado a conectar operadores, grandes afiliados, plataformas e provedores de pagamento em um ambiente dinâmico e estratégico. Cada detalhe foi pensado para facilitar parcerias reais e proporcionar uma experiência memorável antes do evento principal.",
-    about3: "Preencha o formulário abaixo para confirmar sua presença e receber mais informações sobre este evento exclusivo.",
+    contactBtn: "Contato",
+    sponsoredBy: "Patrocínio:",
+    poweredBy: "Realização:",
+    subtitle: "A Noite Mais Exclusiva de Networking",
+    dateInfo: "6 DE ABRIL - 21H ÀS 02H",
+    btnConfirm: "Confirmar Presença",
+    expTitle1: "A ",
+    expTitle2: "Experiência",
+    openBarTitle: "Premium Open Bar",
+    drink1: "Caipirinha",
+    drink2: "Gin & Tônica",
+    drink3: "Cerveja",
+    drink4: "Refrigerante",
+    premiumBrands: "Marcas Premium",
+    foodMenuTitle: "Menu Gastronômico",
+    entriesTitle: "Entradas",
+    entry1: "Dadinhos de tapioca com geleia de pimenta (veg)",
+    entry2: "Croquetes de presunto e costela",
+    entry3: "Mini bruschetta com concassé de tomate, parmesão e manjericão (veg)",
+    entry4: "Coxinha de frango",
+    mainTitle: "Prato Principal",
+    main1: "Nhoque de batata artesanal com fondue de parmesão e chips de jamón",
+    main2: "Risoto de alho-poró com ragu de carne",
+    dessertTitle: "Sobremesa",
+    dessert1: "Brownie de castanha-do-pará com calda de avelã e sorvete de baunilha",
+    galleryDisclaimer: "Imagens ilustrativas do local.",
     footerRights: "© 2026 PRE BIS SIGMA PARTY. Todos os direitos reservados.",
-    footerDesc: "Evento exclusivo para convidados selecionados"
+    footerDesc: "Evento exclusivo para convidados selecionados.",
+    developedBy: "Desenvolvido por"
   },
   en: {
-    heroSubtitle: "Exclusive event for selected guests",
-    heroDesc: "Networking, premium experiences, and high-level connections.",
-    btnForm: "Fill out the Form",
-    aboutTitle1: "About the ",
-    aboutTitle2: "Event",
-    about1: "The PRE BIS SIGMA PARTY 2026 is an exclusive networking event, carefully curated for the key players who drive the market.",
-    about2: "A gathering dedicated to connecting operators, top affiliates, platforms, and payment service providers in a dynamic and strategic environment. Every detail has been designed to facilitate real partnerships and provide a memorable experience ahead of the main event.",
-    about3: "Fill out the form below to confirm your attendance and receive more information about this exclusive event.",
+    contactBtn: "Contact Us",
+    sponsoredBy: "Sponsored by:",
+    poweredBy: "Powered by:",
+    subtitle: "The Most Exclusive Networking Night",
+    dateInfo: "6 APRIL - 9PM TO 2 AM",
+    btnConfirm: "Confirm Attendance",
+    expTitle1: "The ",
+    expTitle2: "Experience",
+    openBarTitle: "Premium Open Bar",
+    drink1: "Caipirinha",
+    drink2: "Gin & Tonic",
+    drink3: "Beer",
+    drink4: "Soda",
+    premiumBrands: "Premium Brands",
+    foodMenuTitle: "Food Menu",
+    entriesTitle: "Entries",
+    entry1: "Tapioca cubes with chili jam (veg)",
+    entry2: "Ham and beef rib croquettes",
+    entry3: "Mini bruschetta with tomato concassé, parmesan & basil (veg)",
+    entry4: "Chicken coxinha",
+    mainTitle: "Main Course",
+    main1: "Handmade potato gnocchi with parmesan fondue & jamón chips",
+    main2: "Leek risotto with beef ragù",
+    dessertTitle: "Dessert",
+    dessert1: "Brazil nut brownie with hazelnut sauce & vanilla ice cream",
+    galleryDisclaimer: "Illustrative images of the venue.",
     footerRights: "© 2026 PRE BIS SIGMA PARTY. All rights reserved.",
-    footerDesc: "Exclusive event for selected guests"
+    footerDesc: "Exclusive event for selected guests.",
+    developedBy: "Developed by"
   },
   es: {
-    heroSubtitle: "Evento exclusivo para invitados seleccionados",
-    heroDesc: "Networking, experiencias premium y conexiones de alto nivel.",
-    btnForm: "Completar Formulario",
-    aboutTitle1: "Sobre el ",
-    aboutTitle2: "Evento",
-    about1: "El PRE BIS SIGMA PARTY 2026 es un evento de networking exclusivo, cuidadosamente curado para los principales actores que impulsan el mercado.",
-    about2: "Un encuentro dedicado a conectar operadores, grandes afiliados, plataformas y proveedores de pago en un entorno dinámico y estratégico. Cada detalle ha sido diseñado para facilitar alianzas reales y brindar una experiencia memorable antes del evento principal.",
-    about3: "Complete el formulario a continuación para confirmar su asistencia y recibir más información sobre este evento exclusivo.",
+    contactBtn: "Contacto",
+    sponsoredBy: "Patrocinado por:",
+    poweredBy: "Realización:",
+    subtitle: "La Noche de Networking Más Exclusiva",
+    dateInfo: "6 DE ABRIL - 21H A 02H",
+    btnConfirm: "Confirmar Asistencia",
+    expTitle1: "La ",
+    expTitle2: "Experiencia",
+    openBarTitle: "Premium Open Bar",
+    drink1: "Caipirinha",
+    drink2: "Gin & Tonic",
+    drink3: "Cerveza",
+    drink4: "Refresco",
+    premiumBrands: "Marcas Premium",
+    foodMenuTitle: "Menú Gastronómico",
+    entriesTitle: "Entradas",
+    entry1: "Cubitos de tapioca con mermelada de chile (veg)",
+    entry2: "Croquetas de jamón y costilla de res",
+    entry3: "Mini bruschetta con concassé de tomate, parmesano y albahaca (veg)",
+    entry4: "Coxinha de pollo",
+    mainTitle: "Plato Principal",
+    main1: "Ñoquis de patata artesanales con fondue de parmesano y chips de jamón",
+    main2: "Risotto de puerro con ragú de carne",
+    dessertTitle: "Postre",
+    dessert1: "Brownie de nuez de Brasil con salsa de avellana y helado de vainilla",
+    galleryDisclaimer: "Imágenes ilustrativas del lugar.",
     footerRights: "© 2026 PRE BIS SIGMA PARTY. Todos los derechos reservados.",
-    footerDesc: "Evento exclusivo para invitados seleccionados"
+    footerDesc: "Evento exclusivo para invitados seleccionados.",
+    developedBy: "Desarrollado por"
   }
 };
 
@@ -51,8 +107,7 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  // Define o Português como idioma padrão
-  const [language, setLanguage] = useState<Language>("pt");
+  const [language, setLanguage] = useState<Language>("pt"); // Inicia em Português
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t: translations[language] }}>
