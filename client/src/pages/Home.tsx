@@ -46,7 +46,7 @@ export default function Home() {
       </header>
 
       {/* HERO SECTION */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-12 pb-16">
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-20 pb-16">
         
         {/* BACKGROUND VÍDEO ATMOSFÉRICO */}
         <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-black">
@@ -66,49 +66,44 @@ export default function Home() {
         {/* CONTEÚDO CENTRAL */}
         <div className="relative z-10 container max-w-4xl mx-auto px-4 md:px-8 text-center flex flex-col items-center justify-center min-h-[85vh]">
           
-          <div className={`transform transition-all duration-1000 delay-200 ${animateIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"} flex flex-col items-center w-full mt-10`}>
+          <div className={`transform transition-all duration-1000 delay-200 ${animateIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"} flex flex-col items-center w-full`}>
             
-            {/* 1. Sponsored By */}
-            <div className="flex flex-col items-center mb-8 md:mb-10">
-               <p className="text-xs md:text-sm font-sans tracking-[0.25em] text-gray-300 mb-4 uppercase font-light">
-                 {t.sponsoredBy}
-               </p>
-               <img src={betwinnerLogo} alt="Betwinner Affiliates" className="w-48 md:w-60 object-contain" />
-            </div>
-
-            {/* 2. Título Principal */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-[1.2] font-serif bg-gradient-to-br from-yellow-200 via-yellow-500 to-yellow-700 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(212,175,55,0.25)]">
+            {/* 1. Título Principal */}
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.1] font-serif bg-gradient-to-br from-yellow-200 via-yellow-500 to-yellow-700 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(212,175,55,0.25)]">
               PRE BIS <br /> SIGMA PARTY
             </h1>
 
-            {/* 3. Rooftop */}
-            <p className="text-sm md:text-lg text-gray-300 font-sans tracking-[0.3em] uppercase mb-10">
-              {t.subtitle}
-            </p>
+            {/* 2. Subtítulo TRADUZIDO + Logo Betwinner Integrada no texto */}
+            <div className="mb-10 px-2 w-full max-w-3xl mx-auto">
+               <p className="text-sm md:text-base lg:text-lg text-gray-300 font-sans tracking-[0.15em] md:tracking-[0.25em] uppercase text-center leading-[2] m-0">
+                 {t.subtitle}
+                 <img src={betwinnerLogo} alt="Betwinner Affiliates" className="inline-block h-5 md:h-7 ml-3 md:ml-4 align-middle -mt-1 md:-mt-1.5" />
+               </p>
+            </div>
 
-            {/* 4. Data e Hora */}
+            {/* 3. Data e Hora TRADUZIDA */}
             <div className="text-xl md:text-2xl text-white font-serif mb-6 font-bold uppercase tracking-wider">
               {t.dateInfo}
             </div>
 
-            {/* 5. Endereço */}
+            {/* 4. Endereço */}
             <a href={googleMapsLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 px-6 py-3 border border-yellow-700/40 rounded-full bg-black/40 hover:bg-yellow-900/30 transition-all text-yellow-500 text-xs md:text-sm tracking-widest uppercase mb-12 md:mb-16 backdrop-blur-sm cursor-pointer group">
                 <MapPin className="w-4 h-4 text-yellow-600 group-hover:scale-110 transition-transform" />
                 <span>Av. Brig. Faria Lima, 4509 – Itaim Bibi</span>
             </a>
 
-            {/* 6. Powered By iGamexpert */}
+            {/* 5. Powered By iGamexpert */}
             <div className="flex flex-col items-center mb-16">
                <p className="text-xs md:text-sm font-sans tracking-[0.2em] text-gray-400 mb-4 uppercase font-light">
                  {t.poweredBy}
                </p>
-               <img src={igamexpertLogo} alt="iGamexpert Event" className="w-48 md:w-60 object-contain" />
+               <img src={igamexpertLogo} alt="iGamexpert Event" className="h-6 md:h-8 object-contain" />
             </div>
 
-            {/* 7. BOTÃO PRINCIPAL */}
+            {/* 6. BOTÃO PRINCIPAL (Restaurado para o design preto com brilho sutil) */}
             <a href={formLink} target="_blank" rel="noopener noreferrer" className="relative inline-block group">
-              <div className="absolute -inset-1.5 bg-gradient-to-r from-yellow-600 via-yellow-400 to-yellow-600 rounded-sm blur-lg opacity-70 animate-pulse group-hover:opacity-100 transition duration-500"></div>
-              <button className="relative border-2 border-yellow-500/80 bg-black px-12 py-5 md:px-16 md:py-6 text-sm md:text-base tracking-[0.2em] text-white uppercase font-serif hover:bg-yellow-950/60 hover:border-yellow-400 transition-all shadow-[0_0_20px_rgba(212,175,55,0.4)]">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-500 via-yellow-300 to-yellow-600 rounded-sm blur-md opacity-30 animate-pulse group-hover:opacity-60 transition duration-500"></div>
+              <button className="relative border border-yellow-500/50 bg-black/80 backdrop-blur-md px-12 py-5 md:px-16 md:py-6 text-sm md:text-base tracking-[0.2em] text-white uppercase font-serif hover:bg-yellow-900/40 transition-colors">
                 {t.btnConfirm}
               </button>
             </a>
@@ -136,6 +131,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-16">
             
+            {/* Secção Open Bar */}
             <div className="bg-zinc-950 p-10 border border-zinc-900 rounded-2xl relative overflow-hidden group hover:border-yellow-900/50 transition-all duration-500 shadow-2xl shadow-black/50">
               <GlassWater className="absolute -right-12 -top-12 w-60 h-60 text-zinc-900 opacity-30 group-hover:text-yellow-950/20 transition-colors duration-500" />
               
@@ -145,7 +141,7 @@ export default function Home() {
                     {t.openBarTitle}
                   </h3>
                   
-                  <ul className="space-y-5 text-xl text-gray-200 mb-14 font-light tracking-wide">
+                  <ul className="space-y-5 text-xl text-gray-200 font-light tracking-wide">
                     {[t.drink1, t.drink2, t.drink3, t.drink4].map(item => (
                         <li key={item} className="flex items-center gap-3">
                             <span className="w-1.5 h-1.5 rounded-full bg-yellow-700"></span>
@@ -153,18 +149,10 @@ export default function Home() {
                         </li>
                     ))}
                   </ul>
-
-                  <div className="pt-10 border-t border-zinc-900/70">
-                    <p className="text-xs text-gray-500 uppercase tracking-[0.3em] mb-5 font-semibold">{t.premiumBrands}</p>
-                    <div className="flex flex-wrap gap-x-4 gap-y-3 text-sm font-medium text-gray-300">
-                      {["Absolut", "Beefeater", "51", "Eisenbahn", "Coca-Cola", "Fanta", "Kuat"].map((brand) => (
-                        <span key={brand} className="bg-black px-4 py-1.5 rounded-full border border-zinc-800 tracking-wide">{brand}</span>
-                      ))}
-                    </div>
-                  </div>
               </div>
             </div>
 
+            {/* Secção Food Menu */}
             <div className="bg-zinc-950 p-10 border border-zinc-900 rounded-2xl relative overflow-hidden group hover:border-yellow-900/50 transition-all duration-500 shadow-2xl shadow-black/50">
               <Utensils className="absolute -right-12 -top-12 w-60 h-60 text-zinc-900 opacity-30 group-hover:text-yellow-950/20 transition-colors duration-500" />
               
@@ -208,10 +196,6 @@ export default function Home() {
       {/* VIBE / GALLERY SECTION MINIMALISTA */}
       <section className="relative py-28 bg-zinc-950 border-t border-zinc-900">
         <div className="container max-w-7xl mx-auto px-4">
-          
-          {/* Título Vibe e Ícone apagados conforme pedido */}
-
-          {/* Grelha de 4 Imagens */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto">
             {minimalVibeImages.map((src, index) => (
                 <div 
@@ -231,8 +215,6 @@ export default function Home() {
                 </div>
             ))}
           </div>
-
-          <p className="text-center text-zinc-600 text-xs tracking-widest pt-16 uppercase">{t.galleryDisclaimer}</p>
         </div>
       </section>
 

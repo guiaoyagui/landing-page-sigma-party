@@ -7,7 +7,7 @@ const translations = {
     contactBtn: "Contato",
     sponsoredBy: "Patrocínio:",
     poweredBy: "Realização:",
-    subtitle: "A Noite Mais Exclusiva de Networking",
+    subtitle: "Festa Exclusiva de Networking patrocinada pela",
     dateInfo: "6 DE ABRIL - 21H ÀS 02H",
     btnConfirm: "Confirmar Presença",
     expTitle1: "A ",
@@ -17,7 +17,6 @@ const translations = {
     drink2: "Gin & Tônica",
     drink3: "Cerveja",
     drink4: "Refrigerante",
-    premiumBrands: "Marcas Premium",
     foodMenuTitle: "Menu Gastronômico",
     entriesTitle: "Entradas",
     entry1: "Dadinhos de tapioca com geleia de pimenta (veg)",
@@ -29,7 +28,6 @@ const translations = {
     main2: "Risoto de alho-poró com ragu de carne",
     dessertTitle: "Sobremesa",
     dessert1: "Brownie de castanha-do-pará com calda de avelã e sorvete de baunilha",
-    galleryDisclaimer: "Imagens ilustrativas do local.",
     footerRights: "© 2026 PRE BIS SIGMA PARTY. Todos os direitos reservados.",
     footerDesc: "Evento exclusivo para convidados selecionados.",
     developedBy: "Desenvolvido por"
@@ -38,8 +36,8 @@ const translations = {
     contactBtn: "Contact Us",
     sponsoredBy: "Sponsored by:",
     poweredBy: "Powered by:",
-    subtitle: "The Most Exclusive Networking Night",
-    dateInfo: "6 APRIL - 9PM TO 2 AM",
+    subtitle: "Exclusive Networking Party sponsored by",
+    dateInfo: "6 APRIL - 9PM TO 2AM",
     btnConfirm: "Confirm Attendance",
     expTitle1: "The ",
     expTitle2: "Experience",
@@ -48,7 +46,6 @@ const translations = {
     drink2: "Gin & Tonic",
     drink3: "Beer",
     drink4: "Soda",
-    premiumBrands: "Premium Brands",
     foodMenuTitle: "Food Menu",
     entriesTitle: "Entries",
     entry1: "Tapioca cubes with chili jam (veg)",
@@ -60,7 +57,6 @@ const translations = {
     main2: "Leek risotto with beef ragù",
     dessertTitle: "Dessert",
     dessert1: "Brazil nut brownie with hazelnut sauce & vanilla ice cream",
-    galleryDisclaimer: "Illustrative images of the venue.",
     footerRights: "© 2026 PRE BIS SIGMA PARTY. All rights reserved.",
     footerDesc: "Exclusive event for selected guests.",
     developedBy: "Developed by"
@@ -69,7 +65,7 @@ const translations = {
     contactBtn: "Contacto",
     sponsoredBy: "Patrocinado por:",
     poweredBy: "Realización:",
-    subtitle: "La Noche de Networking Más Exclusiva",
+    subtitle: "Fiesta Exclusiva de Networking patrocinada por",
     dateInfo: "6 DE ABRIL - 21H A 02H",
     btnConfirm: "Confirmar Asistencia",
     expTitle1: "La ",
@@ -79,7 +75,6 @@ const translations = {
     drink2: "Gin & Tonic",
     drink3: "Cerveza",
     drink4: "Refresco",
-    premiumBrands: "Marcas Premium",
     foodMenuTitle: "Menú Gastronómico",
     entriesTitle: "Entradas",
     entry1: "Cubitos de tapioca con mermelada de chile (veg)",
@@ -91,7 +86,6 @@ const translations = {
     main2: "Risotto de puerro con ragú de carne",
     dessertTitle: "Postre",
     dessert1: "Brownie de nuez de Brasil con salsa de avellana y helado de vainilla",
-    galleryDisclaimer: "Imágenes ilustrativas del lugar.",
     footerRights: "© 2026 PRE BIS SIGMA PARTY. Todos los derechos reservados.",
     footerDesc: "Evento exclusivo para invitados seleccionados.",
     developedBy: "Desarrollado por"
@@ -107,7 +101,7 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>("pt"); // Inicia em Português
+  const [language, setLanguage] = useState<Language>("pt");
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t: translations[language] }}>
