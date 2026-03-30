@@ -81,16 +81,23 @@ export default function Home() {
                </p>
             </div>
 
-            {/* 3. Data e Hora TRADUZIDA */}
+            {/* 3. Data e Hora TRADUZIDA (Agora corrigida para lowercase 'h') */}
             <div className="text-xl md:text-2xl text-white font-serif mb-6 font-bold uppercase tracking-wider">
               {t.dateInfo}
             </div>
 
-            {/* 4. Endereço */}
-            <a href={googleMapsLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 px-6 py-3 border border-yellow-700/40 rounded-full bg-black/40 hover:bg-yellow-900/30 transition-all text-yellow-500 text-xs md:text-sm tracking-widest uppercase mb-12 md:mb-16 backdrop-blur-sm cursor-pointer group">
-                <MapPin className="w-4 h-4 text-yellow-600 group-hover:scale-110 transition-transform" />
-                <span>Av. Brig. Faria Lima, 4509 – Itaim Bibi</span>
-            </a>
+            {/* 4. LE CLUB + Endereço */}
+            <div className="mb-12 md:mb-16 flex flex-col items-center">
+               {/* LE CLUB com o mesmo gradiente do PREBIS SIGMA PARTY */}
+               <h2 className="text-3xl md:text-4xl font-bold font-serif bg-gradient-to-br from-yellow-200 via-yellow-500 to-yellow-700 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(212,175,55,0.25)] uppercase mb-3">
+                 LE CLUB
+               </h2>
+               
+               <a href={googleMapsLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 px-6 py-3 border border-yellow-700/40 rounded-full bg-black/40 hover:bg-yellow-900/30 transition-all text-yellow-500 text-xs md:text-sm tracking-widest uppercase backdrop-blur-sm cursor-pointer group">
+                   <MapPin className="w-4 h-4 text-yellow-600 group-hover:scale-110 transition-transform" />
+                   <span>Av. Brig. Faria Lima, 4509 – Itaim Bibi</span>
+               </a>
+            </div>
 
             {/* 5. Powered By iGamexpert */}
             <div className="flex flex-col items-center mb-16">
@@ -100,10 +107,13 @@ export default function Home() {
                <img src={igamexpertLogo} alt="iGamexpert Event" className="h-6 md:h-8 object-contain" />
             </div>
 
-            {/* 6. BOTÃO PRINCIPAL (Restaurado para o design preto com brilho sutil) */}
+            {/* 6. BOTÃO PRINCIPAL DOURADO E CHAMATIVO */}
             <a href={formLink} target="_blank" rel="noopener noreferrer" className="relative inline-block group">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-500 via-yellow-300 to-yellow-600 rounded-sm blur-md opacity-30 animate-pulse group-hover:opacity-60 transition duration-500"></div>
-              <button className="relative border border-yellow-500/50 bg-black/80 backdrop-blur-md px-12 py-5 md:px-16 md:py-6 text-sm md:text-base tracking-[0.2em] text-white uppercase font-serif hover:bg-yellow-900/40 transition-colors">
+              {/* Brilho externo */}
+              <div className="absolute -inset-1.5 bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-400 rounded-sm blur-lg opacity-70 animate-pulse group-hover:opacity-100 transition duration-500"></div>
+              
+              {/* Botão com fundo gradiente dourado e texto preto */}
+              <button className="relative bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-500 px-12 py-5 md:px-16 md:py-6 text-sm md:text-base tracking-[0.2em] text-zinc-950 font-bold uppercase font-serif hover:brightness-110 hover:scale-105 transition-all duration-300 shadow-[0_0_25px_rgba(212,175,55,0.6)]">
                 {t.btnConfirm}
               </button>
             </a>
@@ -226,8 +236,8 @@ export default function Home() {
                 <span className="text-white">PRE BIS</span> <span className="text-yellow-500">SIGMA</span>
              </h2>
              <a href={formLink} target="_blank" rel="noopener noreferrer" className="relative inline-block group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-500 via-yellow-300 to-yellow-600 rounded-sm blur-sm opacity-30 animate-pulse group-hover:opacity-70 transition duration-500"></div>
-              <button className="relative border border-yellow-500/50 bg-black px-7 py-3 text-xs tracking-[0.2em] leading-none uppercase font-serif hover:bg-yellow-900/40 transition-colors">
+              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-400 rounded-sm blur-md opacity-60 animate-pulse group-hover:opacity-100 transition duration-500"></div>
+              <button className="relative bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-500 px-7 py-3 text-xs tracking-[0.2em] leading-none uppercase font-bold text-zinc-950 font-serif hover:brightness-110 hover:scale-105 transition-all duration-300">
                 <span className="relative z-10">{t.btnConfirm}</span>
               </button>
             </a>

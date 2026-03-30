@@ -6,9 +6,9 @@ const translations = {
   pt: {
     contactBtn: "Contato",
     sponsoredBy: "Patrocínio:",
-    poweredBy: "Realização:",
-    subtitle: "Festa Exclusiva de Networking patrocinada pela",
-    dateInfo: "6 DE ABRIL - 21H ÀS 02H",
+    poweredBy: "Powered by:", 
+    subtitle: "Exclusive Networking Party sponsored by", 
+    dateInfo: "6 DE ABRIL - 21hr - 2hr", // Atualizado para hr
     btnConfirm: "Confirmar Presença",
     expTitle1: "A ",
     expTitle2: "Experiência",
@@ -37,7 +37,7 @@ const translations = {
     sponsoredBy: "Sponsored by:",
     poweredBy: "Powered by:",
     subtitle: "Exclusive Networking Party sponsored by",
-    dateInfo: "6 APRIL - 9PM TO 2AM",
+    dateInfo: "6 APRIL - 9PM TO 2AM", // Mantido em inglês
     btnConfirm: "Confirm Attendance",
     expTitle1: "The ",
     expTitle2: "Experience",
@@ -64,9 +64,9 @@ const translations = {
   es: {
     contactBtn: "Contacto",
     sponsoredBy: "Patrocinado por:",
-    poweredBy: "Realización:",
-    subtitle: "Fiesta Exclusiva de Networking patrocinada por",
-    dateInfo: "6 DE ABRIL - 21H A 02H",
+    poweredBy: "Powered by:",
+    subtitle: "Exclusive Networking Party sponsored by",
+    dateInfo: "6 DE ABRIL - 21hr - 2hr", // Atualizado para hr
     btnConfirm: "Confirmar Asistencia",
     expTitle1: "La ",
     expTitle2: "Experiencia",
