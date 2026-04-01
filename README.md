@@ -68,9 +68,9 @@ O projeto foi estruturado com foco em conversão:
 
 **Frontend**
 
-* HTML5
-* CSS3
-* JavaScript
+- TypeScript  
+- Tailwind CSS  
+- HTML5  
 
 **Integrações**
 
