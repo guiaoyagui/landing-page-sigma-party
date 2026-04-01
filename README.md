@@ -1,85 +1,134 @@
-# PRE BIS SIGMA PARTY 2026
+# 🎉 PRE BIS SIGMA PARTY 2026 – Event Landing Page
 
-Landing page premium e elegante para o evento PRE BIS SIGMA PARTY 2026.
+💻 Fullstack Web Project | Frontend, Integrações e UX focado em conversão
 
-## 🎨 Design
+---
 
-- **Tema:** Art Deco Contemporâneo
-- **Cores:** Preto (#000000), Dourado (#D4AF37), Branco Marfim (#F5F5F0)
-- **Tipografia:** Playfair Display (títulos) + Lato (corpo)
-- **Responsividade:** Mobile-first, totalmente adaptado para desktop
+## 📌 Visão Geral
 
-## 🚀 Como Rodar Localmente
+Landing page desenvolvida para o evento **PRE BIS SIGMA PARTY 2026**, com foco em experiência visual premium, captação de leads e apresentação de informações de forma clara e atrativa.
 
-### Pré-requisitos
+O projeto foi pensado como uma solução real para eventos, priorizando **conversão, usabilidade e facilidade de manutenção**.
 
-- Node.js 18+ instalado
-- npm ou pnpm
+---
 
-### Instalação
+## 🎯 Objetivo do Projeto
 
-```bash
-# Instalar dependências
-npm install
+* Criar uma página de alto impacto visual
+* Facilitar inscrições através de integração com formulário
+* Permitir fácil atualização de conteúdo por usuários não técnicos
+* Simular um ambiente de produto real (uso profissional)
 
-# Iniciar servidor de desenvolvimento
-npm run dev
-```
+---
 
-O servidor estará disponível em `http://localhost:3000`
+## 🧠 Problema Resolvido
 
-### Build para Produção
+Eventos geralmente dependem de desenvolvedores para qualquer alteração no site.
 
-```bash
-npm run build
-```
+👉 Solução implementada:
 
-Os arquivos compilados estarão em `dist/`
+* Estrutura que permite atualização de conteúdo sem necessidade de código
+* Integração com ferramentas externas (Google Forms / conteúdo dinâmico)
+* Interface otimizada para conversão de usuários
 
-## 📁 Estrutura do Projeto
+---
 
-```
-client/
-├── public/           # Arquivos estáticos (favicon, etc)
-├── src/
-│   ├── components/   # Componentes reutilizáveis
-│   ├── contexts/     # React contexts
-│   ├── pages/        # Páginas da aplicação
-│   ├── App.tsx       # Componente raiz
-│   ├── main.tsx      # Ponto de entrada
-│   └── index.css     # Estilos globais
-├── index.html        # HTML principal
-vite.config.ts        # Configuração do Vite
-package.json          # Dependências e scripts
-```
+## 🚀 Funcionalidades
 
-## 🔧 Configuração
+* 🎬 Hero section com vídeo de background (experiência imersiva)
+* ⏳ Countdown dinâmico para o evento
+* 📍 Integração com localização (Google)
+* 🎟️ Captação de leads via Google Forms
+* 🍸 Seção de Open Bar com branding de parceiros
+* 🍽️ Menu completo estruturado por categorias
+* 📱 Layout totalmente responsivo
 
-### Adicionar Link do Formulário
+---
 
-Abra `client/src/pages/Home.tsx` e substitua:
+## 🎯 Conversão (UX Strategy)
 
-```typescript
-const formLink = "https://docs.google.com/forms/d/e/1FAIpQLSd_YOUR_FORM_ID_HERE/viewform";
-```
+O projeto foi estruturado com foco em conversão:
 
-Pelo seu link do Google Forms.
+* CTA principal em destaque: **Join the Party**
+* Hierarquia visual clara
+* Informações essenciais acima da dobra
+* Redução de fricção para inscrição
 
-## 📦 Dependências
+---
 
-- **React 19** - Framework UI
-- **TypeScript** - Tipagem estática
-- **Tailwind CSS 4** - Utilitários CSS
-- **Vite** - Build tool
-- **Wouter** - Roteamento leve
-- **Lucide React** - Ícones
+## 🔗 Integrações
 
-## 📝 Licença
+* Google Forms → coleta de leads
+* Google Maps → localização
+* Conteúdo dinâmico (estrutura preparada para CMS externo)
 
-MIT
+---
 
-## 🎯 Notas
+## 🛠️ Tecnologias Utilizadas
 
-- O projeto é totalmente independente e não possui dependências de plataformas externas
-- Todas as imagens são servidas via CDN (URLs externas)
-- O código está pronto para produção e pode ser deployado em qualquer servidor estático
+**Frontend**
+
+* HTML5
+* CSS3
+* JavaScript
+
+**Integrações**
+
+* APIs externas
+* Google Forms
+* Manipulação de conteúdo dinâmico
+
+---
+
+## 🧩 Arquitetura
+
+O projeto foi estruturado como uma **landing page modular**, com:
+
+* separação por seções (hero, evento, menu, CTA)
+* componentes reutilizáveis
+* fácil manutenção e escalabilidade
+
+---
+
+## 🎨 Design & Experiência
+
+* Identidade visual premium (preto + dourado)
+* Tipografia moderna
+* Elementos visuais voltados para eventos exclusivos
+* Foco em impacto visual e experiência do usuário
+
+---
+
+## 🌐 Acesso
+
+👉 **Landing Page:** *(https://www.igamexpert.com/)*
+
+---
+
+## 💡 Diferenciais do Projeto
+
+* Projeto baseado em necessidade real
+* Integração com ferramentas externas sem backend próprio
+* Foco em UX e conversão
+* Estrutura pensada para usuários não técnicos
+* Aplicação prática de conceitos de produto
+
+---
+
+## 📈 Aprendizados
+
+* Construção de interfaces focadas em conversão
+* Integração com serviços externos
+* Organização de conteúdo dinâmico
+* Pensamento orientado a produto
+
+---
+
+## 👨‍💻 Autor
+
+**Guilherme Aoyagui Ide**
+💻 Fullstack Developer
+
+---
+
+Projeto desenvolvido com foco em aplicações reais, experiência do usuário e soluções escaláveis.
